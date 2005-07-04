@@ -71,8 +71,10 @@ ad_proc -private auth::http::authentication::Authenticate {
 } {
     if { [auth::http::auth $username $password] } {
         set result(auth_status) ok
+	ns_log Notice "auth-http: Authentication succeeded for $username"
     } else {
         set result(auth_status) auth_error
+	ns_log Notice "auth-http: Authentication failed for $username"
     }
 
     set result(account_status) ok
