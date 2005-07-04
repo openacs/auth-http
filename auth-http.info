@@ -22,8 +22,8 @@
             <callback type="after-install"  proc="auth::http::after_install"/>
         </callbacks>
         <parameters>
-            <parameter datatype="string"  min_n_values="1"  max_n_values="1"  name="http_auth_parameters"  default="opacdb=UBMA_OPAC,Funktion=pruefe_login" description="A comma separated list of key-value pairs of all required parameters except for username and password."/>
-            <parameter datatype="string"  min_n_values="1"  max_n_values="1"  name="http_auth_url"  default="http://bibserv14.bib.uni-mannheim.de/i3v_library_olix/ausleihe/i3v_ausleihe.cgi" description="The full URL to the Server."/>
+            <parameter datatype="string"  min_n_values="1"  max_n_values="1"  name="http_auth_parameters"  default="param1=value1,param2=value2" description="A comma separated list of key-value pairs of all required parameters except for username and password."/>
+            <parameter datatype="string"  min_n_values="1"  max_n_values="1"  name="http_auth_url"  default="http://myserver/auth.cgi" description="The full URL to the Server."/>
             <parameter datatype="string"  min_n_values="1"  max_n_values="1"  name="password"  default="password" description="The parameter name for the password parameter."/>
             <parameter datatype="string"  min_n_values="1"  max_n_values="1"  name="username"  default="user" description="The parameter name for the user id."/>
         </parameters>
