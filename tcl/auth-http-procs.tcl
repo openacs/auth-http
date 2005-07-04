@@ -214,7 +214,20 @@ ad_proc -private auth::http::auth {
     ns_set free $hdrs
     close $rfd
 
-    if { [string match {[ERROR]*} $result] } {
+    set failure_token "[parameter::get_from_package_key -package_key auth-http -parameter failureToken -default "ERROR"]"
+    set words [split $result "\n,\t, "]
+
+    set found_p 0
+    foreach word $words {
+	
+	if { [string match $failure_token $word] } {
+	    set found_p 1
+	    break
+	}
+    }
+    
+    #since we check against failure we return 0 if failed and 1 if failure_token was not found
+    if { $found_p } {
 	return 0
     } else {
 	return 1

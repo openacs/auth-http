@@ -11,6 +11,8 @@ via HTTP-Request.
 all required parameters except for username and password like "method=simple,encrypted=no"
 <li><code>password</code> - The parameter name for the password parameter like "user"
 <li><code>username</code> - The parameter name for the user id like "pw"
+<li><code>failureToken</code> - The word that indicates in the server response
+that the authentication failed like "ERROR"
 </ul>
 </p>
 <p>
