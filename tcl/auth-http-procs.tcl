@@ -179,7 +179,7 @@ ad_proc -private auth::http::auth {
 
     set hdrs [ns_set create]
 
-    # headers necesary for a post and the form variables
+    # headers necessary for a post and the form variables
     ns_set put $hdrs Accept "*/*"
     ns_set put $hdrs User-Agent "[ns_info name]-Tcl/[ns_info version]"
     ns_set put $hdrs "Content-type" "text/text"
